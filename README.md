@@ -20,7 +20,9 @@ Description: data scraping used for extracting data from websites (Wikipedia)
 **Enrichment**: Bots list, User Agents parsing, Reverse DNS
 
 **ML job**
-* Overflow : avg(bytes_in) over user|client_ip (population)
+* Nb of hits (RPS): `over user.id` (population)
+* Nb of 404: `over user.id` (population)
+* Downloaded volume (comparing per session/user id): `sum(network.outbound.bytes) over user.id` (population)
 
 
 ### Unusual visitor
